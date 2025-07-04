@@ -1,12 +1,69 @@
-# React + Vite
+# 🛡️ React Authentication Modal App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React app demonstrating **Sign Up** and **Sign In** modals with validation, local storage user management, protected routes, and a personalized dashboard.
 
-Currently, two official plugins are available:
+Built with:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React + Vite**
+- **React Router**
+- **React Bootstrap**
+- **LocalStorage** (for user storage and session handling)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📸 Demo Overview
+
+- 👤 **Sign Up Modal**
+
+  - Fields: `Name`, `Email`, `Password`, `Terms Acceptance`
+  - Validates all inputs
+  - Checks for duplicate email
+  - Stores user in `localStorage`
+  - Shows success message on successful registration
+
+- 🔐 **Sign In Modal**
+
+  - Fields: `Email`, `Password`
+  - Validates inputs
+  - Authenticates using stored users
+  - Redirects to dashboard on success
+
+- 🧑‍💼 **Dashboard**
+  - Protected route
+  - Shows `Welcome, [User Name]`
+  - Has a **Sign Out** button that clears session and redirects to home
+
+---
+
+## 📁 Project Structure
+
+```txt
+src/
+├── App.js
+├── components/
+│ ├── SignUpModal.js
+│ ├── SignInModal.js
+├── pages/
+│ ├── Home.js
+│ ├── Dashboard.js
+├── routes/
+│ └── ProtectedRoute.js
+
+```
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/rishabhmfullstack/frontend-task.git
+cd frontend-task
+
+npm install
+
+npm run dev
+
+```
+
+Then visit:
+👉 http://localhost:5173 (or whatever port Vite starts on)
